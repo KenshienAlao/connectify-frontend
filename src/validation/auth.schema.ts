@@ -31,4 +31,10 @@ export const RegisterSchema = z
     path: ["email", "contactNumber"],
   });
 
+export const LoginSchema = z.object({
+  email: z.string().trim().email({ message: "Invalid email format" }),
+  password: z.string().trim().min(8, "Password is too short"),
+});
+
 export type RegisterSchemaType = z.infer<typeof RegisterSchema>;
+export type LoginSchemaType = z.infer<typeof LoginSchema>;

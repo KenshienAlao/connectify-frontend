@@ -1,10 +1,10 @@
 "use client";
-import { initloginRequest, loginRequest } from "@/model/auth/login.model";
 import {
   initRegisterRequest,
-  registerRequest,
+  RegisterRequest,
 } from "@/model/auth/register.model";
-import { RegisterService } from "@/services/auth/register";
+import { AuthService } from "@/service/auth/auth.service";
+
 
 import { notifError, notifSuccess } from "@/utils/notification";
 import { RegisterSchema } from "@/validation/auth.schema";
@@ -19,7 +19,7 @@ export default function Page() {
 
   const [isLoding, setIsLoading] = useState<boolean>(false);
   const [isShowPassword, setIsShowPassword] = useState<boolean>(false);
-  const [form, setForm] = useState<registerRequest>(initRegisterRequest);
+  const [form, setForm] = useState<RegisterRequest>(initRegisterRequest);
 
   const days = Array.from({ length: 31 }, (_, i) => i + 1);
 
@@ -55,7 +55,7 @@ export default function Page() {
     }
 
     setIsLoading(true);
-    const { data, error } = await RegisterService.register(result.data);
+    const { data, error } = await AuthService.register(result.data);
 
     if (error) {
       setIsLoading(false)

@@ -1,4 +1,4 @@
-export type registerRequest = {
+export type RegisterRequest = {
   name: {
     firstName: string;
     lastName: string;
@@ -14,11 +14,11 @@ export type registerRequest = {
   password: string;
 };
 
-export type registerResponse = {
+export type RegisterResponse = {
   message: string;
 };
 
-export const initRegisterRequest: registerRequest = {
+export const initRegisterRequest: RegisterRequest = {
   name: {
     firstName: "",
     lastName: "",

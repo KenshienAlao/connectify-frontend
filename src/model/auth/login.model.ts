@@ -1,9 +1,10 @@
-export type loginRequest = {
+export type LoginRequest = {
   email: string;
   password: string;
 };
 
-export type loginResponse = {
+export type LoginResponse = {
+  message: string;
   access_token: string;
   expired_in: string;
   user: {
@@ -14,7 +15,7 @@ export type loginResponse = {
   };
 };
 
-export const initloginRequest: loginRequest = {
+export const initloginRequest: LoginRequest = {
   email: "",
   password: "",
 };
