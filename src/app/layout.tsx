@@ -3,10 +3,10 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "Facebook Clone",
-  description: "Facebook Clone",
+  title: "Connectify",
+  description: "Connectify",
   icons: {
-    icon: "/icon.svg",
+    icon: "/logoicon.svg",
   },
 };
 

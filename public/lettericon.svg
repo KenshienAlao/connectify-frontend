@@ -1,0 +1,8 @@
+<svg width="400" height="100" viewBox="0 0 400 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="70" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="55" fill="#007CF0">
+    Connect<tspan fill="#00DFD8">ify</tspan>
+  </text>
+  <circle cx="345" cy="40" r="6" fill="#00DFD8" />
+  <circle cx="370" cy="30" r="6" fill="#007CF0" />
+  <path d="M345 40L370 30" stroke="#007CF0" stroke-width="2" stroke-dasharray="4 2" />
+</svg>
